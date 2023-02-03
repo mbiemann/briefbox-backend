@@ -12,8 +12,7 @@ Authentication Sequence Diagram:
 sequenceDiagram
     participant A as Web/Mobile App
     participant B1 as Code endpoint
-    participant B2 as Challenge endpoint
-    participant B3 as Token endpoint
+    participant B2 as Token endpoint
     participant C as Server database
     actor D as Contact (SMS/e-mail)
     participant E as Local cache
@@ -25,15 +24,10 @@ sequenceDiagram
     activate D
     A-->D: Check Code
     deactivate D
-    A->>+B2: Validade Code with Contact and UUID
-    B2->C: Get Code with Contact and UUID
-    B2-)C: Put Challenge with Contact, UUID and Code
-    B2--)-A: Return Challenge
-    A->>+B3: Request Token with Contact, UUID, Code and Challenge
-    B3->C: Get Challenge with Contact, UUID and Code
-    B3->C: Delete Contact, UUID, Code and Challenge
+    A->>+B2: Request Token with Contact, UUID and Code
+    B2->C: Delete Contact, UUID and Code
     deactivate C
-    B3--)-A: Return Token
+    B2--)-A: Return Token
     A-)E: Put Token
     activate E
     deactivate E
