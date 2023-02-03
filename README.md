@@ -1,10 +1,11 @@
 # Brief Box Back-end Serverless Services
 
 
-## Token
+## Authentication
 
-- Type: [JSON Web Token](https://jwt.io)
-- Expiration: 24 hours
+- Token Type: [JSON Web Token](https://jwt.io)
+- Token Expiration: 24 hours
+- Code Format: 999 999 (space insensitive)
 
 **Authentication Sequence Diagram**
 
