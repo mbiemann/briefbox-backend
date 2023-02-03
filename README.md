@@ -1,13 +1,12 @@
 # Brief Box Back-end Serverless Services
 
-
 ## Authentication
 
 - Token Type: [JSON Web Token](https://jwt.io)
 - Token Expiration: 24 hours
 - Code Format: 999 999 (space insensitive)
 
-**Authentication Sequence Diagram**
+Authentication Sequence Diagram:
 
 ```mermaid
 sequenceDiagram
@@ -40,7 +39,7 @@ sequenceDiagram
     deactivate E
 ```
 
-**Backend Service Sequence Diagram**
+Backend Service Sequence Diagram:
 
 ```mermaid
 sequenceDiagram
@@ -60,12 +59,21 @@ sequenceDiagram
     deactivate E
 ```
 
+
 ## Development
+
+To install CDK:
+
+```
+$ nvm use 18.12.1
+$ npm install -g aws-cdk@2.63.0
+```
 
 To create a virtualenv:
 
 ```
-$ python3 -m venv .venv
+$ pyenv install 3.10.3
+$ pyenv exec python -m venv .venv
 $ .venv/bin/pip install -r requirements.txt
 ```
 

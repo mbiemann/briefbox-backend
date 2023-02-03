@@ -1,2 +1,6 @@
-aws-cdk-lib==2.61.1
+aws-cdk-lib==2.63.0
+aws-cdk.aws-apigatewayv2-alpha==2.63.0a0
+aws-cdk.aws-apigatewayv2-authorizers-alpha==2.63.0a0
+aws-cdk.aws-apigatewayv2-integrations-alpha==2.63.0a0
+aws-cdk.aws-lambda-python-alpha==2.63.0a0
 constructs>=10.0.0,<11.0.0
