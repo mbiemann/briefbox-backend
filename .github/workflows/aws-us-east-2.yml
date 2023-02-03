@@ -26,6 +26,9 @@ jobs:
       - shell: bash
         run: .venv/bin/pip install -r requirements.txt
 
+      - shell: bash
+        run: .venv/bin/pytest
+
       - uses: actions/setup-node@v3.6.0
         with:
           node-version: '18.12.1'
@@ -35,3 +38,6 @@ jobs:
 
       - shell: bash
         run: cdk deploy
+
+      - shell: bash
+        run: .venv/bin/behave

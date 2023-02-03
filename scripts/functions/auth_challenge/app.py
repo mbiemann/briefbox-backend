@@ -8,7 +8,7 @@ def handler(event, _) -> dict:
             "Content-Type": "application/json",
         },
         "body": dumps({
-            "message": "Hello, auth code world!",
+            "message": "Hello, auth challenge world!",
             "event": event,
         }),
     }

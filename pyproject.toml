@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+addopts = [
+    "--cov=scripts",
+    "--cov-fail-under=90",
+    "--cov-report=term-missing",
+]

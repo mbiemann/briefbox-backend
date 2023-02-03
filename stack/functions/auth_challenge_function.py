@@ -3,13 +3,13 @@ from aws_cdk.aws_lambda_python_alpha import PythonFunction
 import stack.constants as const
 
 
-class AuthCodeFunction(PythonFunction):
+class AuthChallengeFunction(PythonFunction):
     def __init__(self, stack):
         super().__init__(
             scope=stack,
-            id="auth-code",
-            function_name=f"{stack.stack_name}-auth-code",
-            entry="./scripts/functions/auth_code",
+            id="auth-challenge",
+            function_name=f"{stack.stack_name}-auth-challenge",
+            entry="./scripts/functions/auth_challenge",
             index="app.py",
             handler="handler",
             architecture=const.PYTHON_ARCHITECTURE,
