@@ -1,4 +1,5 @@
 {
   "app": ".venv/bin/python cdk.py",
+  "requireApproval": "never",
   "context": {}
 }

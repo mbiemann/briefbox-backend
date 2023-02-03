@@ -1,8 +1,5 @@
 name: aws-us-east-2
-on:
-  push:
-    branches:
-      - main
+on: push
 concurrency: off
 jobs:
   deploy:
