@@ -17,15 +17,15 @@ sequenceDiagram
     actor D as Contact (SMS/e-mail)
     participant E as Local cache
     autonumber
-    A->>+B1: Generate Code with Contact and UUID
-    B1-)C: Put Code, Contact, UUID and TTL
+    A->>+B1: Generate Code with Contact
+    B1-)C: Put Code, Contact and TTL
     activate C
     B1-)-D: Send Code
     activate D
     A-->D: Check Code
     deactivate D
-    A->>+B2: Request Token with Contact, UUID and Code
-    B2->C: Delete Contact, UUID and Code
+    A->>+B2: Request Token with Contact and Code
+    B2->C: Delete Contact and Code
     deactivate C
     B2--)-A: Return Token
     A-)E: Put Token
