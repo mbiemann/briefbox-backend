@@ -1,6 +1,18 @@
 from importlib.util import spec_from_file_location, module_from_spec
+import sys
 
 from pytest import fixture
+
+
+common_spec = spec_from_file_location("common", "scripts/layers/common/common.py")
+common_module = module_from_spec(common_spec)
+sys.modules["common"] = common_module
+common_spec.loader.exec_module(common_module)
+
+auth_spec = spec_from_file_location("auth", "scripts/layers/auth/auth.py")
+auth_module = module_from_spec(auth_spec)
+sys.modules["auth"] = auth_module
+auth_spec.loader.exec_module(auth_module)
 
 
 @fixture

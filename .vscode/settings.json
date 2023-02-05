@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./scripts/layers/auth",
+        "./scripts/layers/common",
+    ]
+}

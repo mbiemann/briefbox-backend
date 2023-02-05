@@ -75,6 +75,6 @@ Useful commands:
 
  * `cdk diff`         compare deployed stack with current state
  * `cdk deploy`       deploy this stack to your default AWS account/region
- * `.venv/bin/pytest` run python unit tests
+ * `.venv/bin/pytest` run python local tests
  * `.venv/bin/behave` run behaviour feature tests
  * `.venv/bin/behave --no-capture --no-capture-stderr` run behaviour feature tests with logs
