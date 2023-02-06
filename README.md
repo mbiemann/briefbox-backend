@@ -3,8 +3,8 @@
 ## Authentication
 
 - Token Type: [JSON Web Token](https://jwt.io)
-- Token Expiration: 24 hours
-- Code Format: 999 999 (space insensitive)
+- Token Expiration: 1 hour or 1 year (if remember flag)
+- Code Format: 999999
 
 Authentication Sequence Diagram:
 
@@ -63,7 +63,7 @@ $ nvm use 18.12.1
 $ npm install -g aws-cdk@2.63.0
 ```
 
-To create a virtualenv:
+To create Python Virtual Environment:
 
 ```
 $ pyenv install 3.10.3
