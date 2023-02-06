@@ -1,4 +1,4 @@
-# Brief Box Back-end Serverless Services
+# Brief Box Backend Serverless Services
 
 ## Authentication
 
