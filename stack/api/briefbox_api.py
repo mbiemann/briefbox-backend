@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 from aws_cdk import Duration
-from aws_cdk.aws_apigatewayv2_alpha import HttpApi, HttpMethod
+from aws_cdk.aws_apigatewayv2_alpha import HttpApi, HttpMethod, CorsPreflightOptions, CorsHttpMethod
 from aws_cdk.aws_apigatewayv2_authorizers_alpha import HttpLambdaAuthorizer, HttpLambdaResponseType
 from aws_cdk.aws_apigatewayv2_integrations_alpha import HttpLambdaIntegration
 
@@ -25,6 +25,11 @@ class BriefBoxAPI(HttpApi):
             id="api",
             api_name=f"{stack.stack_name}-api",
             create_default_stage=False,
+            cors_preflight=CorsPreflightOptions(
+                allow_origins=["*"],
+                allow_headers=["*"],
+                allow_methods=[CorsHttpMethod.ANY],
+            ),
         )
         self._stage()
         self._authorizer(authorizer_func)
